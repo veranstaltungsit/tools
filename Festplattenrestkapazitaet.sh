@@ -17,3 +17,4 @@ if [ $use -gt $max ];
         else
     echo "Genug Speicher"
         fi
+		
