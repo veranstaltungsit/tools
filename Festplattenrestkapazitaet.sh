@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Datenträger
 hdd=/dev/md0
 
@@ -7,14 +8,12 @@ max=90
 
 # Aktuell in benutzung in %
 use=$(df $hdd | egrep -o '[^rw] ..%' | sed 's/%//g')
-echo "use: $use"
-
 
 #Hokuspokus
 if [ $use -gt $max ];
         then
-    echo "Speicher Nachfüllen!"
+			echo "Speicher Nachfüllen!"
         else
-    echo "Genug Speicher"
+			echo "Genug Speicher"
         fi
 		
